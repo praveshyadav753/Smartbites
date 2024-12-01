@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Animated Weight Scale Input</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f1f1f1;
+        }
+
+        .scale-container {
+            position: relative;
+            width: 300px;
+            height: 350px;
+            border: 5px solid #37779E;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 70%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .scale {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .needle {
+            position: absolute;
+            width: 3px;
+            height: 100px;
+            background-color: #37779E;
+            transform-origin: bottom center;
+            transition: transform 0.3s ease;
+        }
+
+        .digital-display {
+            margin-top: 20px;
+            font-size: 24px;
+            pointer-events: none;
+            font-weight: bold;
+            color: #37779E;
+        }
+
+        .weight-input {
+            margin-top: 20px;
+            width: 70%;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            appearance: none;
+            -webkit-appearance: none;
+            height: 10px;
+            background: #974242;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="range"]:focus {
+            background: #bbb;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background-color: #37779E;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background-color: #37779E;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .unit-toggle {
+            margin-top: 10px;
+            cursor: pointer;
+            color: #37779E;
+            font-weight: bold;
+            border: none;
+            background: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scale-container">
+        <div class="scale">
+            <div class="needle" id="needle"></div>
+        </div>
+        <div class="digital-display" id="weight-display">0.00 kg</div>
+        <div class="weight-input">
+            <input type="range" id="weight-slider" min="0" max="200" value="0" step="0.1">
+        </div>
+        <button class="unit-toggle" id="unit-toggle">Switch to lbs</button>
+    </div>
+
+    <script>
+        const weightSlider = document.getElementById('weight-slider');
+        const weightDisplay = document.getElementById('weight-display');
+        const needle = document.getElementById('needle');
+        const unitToggle = document.getElementById('unit-toggle');
+
+        let isKg = true;  // Track the current unit
+
+        function updateWeight() {
+            const weight = parseFloat(weightSlider.value).toFixed(2);  // Get weight with 2 decimal points
+            const displayWeight = isKg ? `${weight} kg` : `${(weight * 2.20462).toFixed(2)} lbs`;  // Convert if needed
+            weightDisplay.textContent = displayWeight;
+
+            // Rotate the needle based on the weight input
+            const angle = (weight / 200) * 180 - 90;  // Map weight to angle (scale from 0-200kg to -90 to 90 degrees)
+            needle.style.transform = `rotate(${angle}deg)`;
+        }
+
+        // Toggle between kg and lbs
+        unitToggle.addEventListener('click', () => {
+            isKg = !isKg;
+            unitToggle.textContent = isKg ? "Switch to lbs" : "Switch to kg";
+            updateWeight();
+        });
+
+        // Update weight and needle animation on slider change
+        weightSlider.addEventListener('input', updateWeight);
+
+        // Initialize the scale
+        updateWeight(); // To display the initial value when the page loads
+    </script>
+
+</body>
+</html>

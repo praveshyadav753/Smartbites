@@ -1,0 +1,523 @@
+/** 
+
+
+.camera-view {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.camera-view .div {
+    background-color: #ffffff;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.camera-view .overlap {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    
+}
+
+.camera-view .scan-page {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    
+}
+
+.camera-view .overlap-group {
+    height: 100%;
+    left: 0px;
+    
+    top: 0px;
+    width: 100%;
+}
+
+.camera-view .main {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.camera-view .main-background {
+    align-self: stretch;
+    background: linear-gradient(180deg, rgb(35.68, 31.85, 70.13) 0%, rgb(37.56, 81.16, 107.31) 100%);
+    flex: 1;
+    position: relative;
+    flex-grow: 1;
+    position: relative;
+}
+
+.camera-view .center-effect {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    left: 50%;
+    top:50%;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 70%;
+}
+
+.camera-view .ellipse {
+    background: linear-gradient(180deg, rgb(35, 58, 77) 0%, rgb(19.87, 49.33, 72.25) 100%);
+    border-radius: 140.07px/279px;
+    filter: blur(141.9px);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.camera-view .back {
+    height: 5vw;
+    width: 7.4vw;
+    max-width: 2rem;
+    left: 5%;
+    top: 5%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.camera-view .disperse-food {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40%;  
+    right: 0%; 
+    transform: translate(0, -50%); 
+    width: 40%; 
+    max-width: 19.68rem; 
+    height: auto; 
+    
+    
+}
+
+.camera-view .snacks {
+    aspect-ratio: 0.47;
+    height:auto;
+    margin-left: -7.6px;
+    margin-top: -0.6px;
+    position: relative;
+    width: 100%;
+    object-fit: cover
+    
+}
+
+
+
+
+.camera-view .cameraframe-red {
+    position: relative;
+    width: 90%;
+    width: 100vw;
+    max-width: 400px; 
+    height: auto;
+    aspect-ratio: 3/4; 
+    max-height: 200px; 
+    background-color: #f3f3f3; 
+    border: 2px solid red; 
+    overflow: visible; 
+    border-radius: 10px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin: 2%;
+    object-fit: none;
+}
+.camera-view .cameraframe-red img.selected-image {
+    width: 100%;
+    height: auto;
+    object-fit: none;
+}
+.camera-view .cameraframe-red video,
+.camera-view .cameraframe-red canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.vedio-lve{
+    
+    position: absolute;
+    top:0;
+}    
+  
+   
+
+.camera-view .pepsi {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    right: 0%;
+    position: absolute;
+    top: 85%;
+    
+}
+
+.camera-view .designer-removebg {
+    height: 25%;
+    margin-bottom: -9.4px;
+    margin-top: -1.4px;
+    object-fit: cover;
+    position: relative;
+    width: 46px;
+}
+
+.camera-view .popcorn-down {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    /* height: 191px; 
+    height: auto;
+
+    position: absolute;
+    bottom: 0px;
+    /* width: 207px; 
+    width: 40%;
+    max-width: 222px;
+    object-fit: cover
+}
+
+.camera-view .gemini-generated {
+    align-self: stretch;
+    height: auto;
+    aspect-ratio: 0.8;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+.camera-view .buiscuit-up {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: -1%;
+    transform: translate(-10%,0);
+    position: absolute;
+    top: 10%;
+    filter: drop-shadow(2px 2px 1px back);
+    max-width: 11rem;
+    width: 30%;
+}
+
+.camera-view .img {
+    align-self: stretch;
+    height: 157.37px;
+    margin-bottom: -14.4px;
+    margin-right: -22.14px;
+    margin-top: -6.4px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    filter: drop-shadow(2px 2px 1px back);
+}
+.tool{
+    height:auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+    filter: drop-shadow(2px 2px 1px back);
+}
+.camera-view .ellipse-2 {
+    background-color: #dac05c;
+    border-radius: 50%;
+    height: 2em;
+    
+    width: 2.1em;
+}
+
+.camera-view .tool .flash-light {
+    align-items: center;
+    height: 31px;
+    justify-content: center;
+    margin-right: 5%;
+    position: relative;
+    cursor: pointer;
+    width: 32px;
+}
+.camera-view .flashimg {
+    height: 30px;
+    position: relative;
+    width: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.gallery{
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    align-items: center;
+}
+.camera-view .solar-gallery-add {
+    height: 100%;
+    width: 100%;
+}
+ **/
+ /* Main Camera View */
+.camera-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(197, 105, 81) ;
+    overflow: hidden;
+}
+.div{
+    width: 100%;
+    height: 100%;
+}
+/* Background and Main Layout */
+.main-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #1f3a5b, #090c15);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Top Navigation (Back Button and Status Bar) */
+.top-nav-scan {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    width: 5vw;
+    max-width: 1.5rem;
+    cursor: pointer;
+}
+
+/* Disperse Food Section (Right Side with snacks) */
+.camera-view .disperse-food {
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: absolute;
+     top: 40%;  
+     right: 0%; 
+     transform: translate(0, -50%); 
+     width: 40%; 
+     max-width: 19.68rem; 
+     height: auto; 
+     
+     
+ }
+ 
+ .camera-view .snacks {
+     aspect-ratio: 0.47;
+     height:auto;
+     margin-left: -7.6px;
+     margin-top: -0.6px;
+     position: relative;
+     width: 100%;
+     object-fit: cover
+     
+ }
+
+/* Camera Frame (Red Border Box) */
+.cameraframe-red {
+height: auto;
+object-fit: contain;
+position: relative;
+width: 90%;
+aspect-ratio: 16/9;
+border: 5px solid rgb(192, 29, 29);
+border-radius:12px;
+overflow: hidden;
+}
+
+.vedio-lve{
+    width: 100%;
+    height: 100%;
+}
+video,canvas{
+height: 100%;
+object-fit: cover;
+position: absolute;
+width: 100%;
+}
+
+/* Pepsi Section (Bottom Right Corner) */
+.pepsi {
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 20%;
+    max-width: 5rem;
+}
+.designer-removebg{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+    
+}
+
+/* Flashlight and Image Upload Icons */
+.tool{
+    height:auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    position: relative;
+   
+    filter: drop-shadow(2px 2px 1px back);
+}
+.camera-view .ellipse-2 {
+    background-color: #dac05c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 32px;
+    height: auto;
+    aspect-ratio: 1;
+    
+}
+
+.camera-view .tool .flash-light {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7%;
+    position: relative;
+    cursor: pointer;     
+    width: 6%'';
+    aspect-ratio: 1 / 1;
+    
+}
+.camera-view .flashimg {
+    height: 100%;
+    position: relative;
+    width: 0.5em;
+    
+}
+.gallery {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popcorn at Bottom (Aligned in the middle) */
+.popcorn-down {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 40%;
+    max-width: 222px;
+    object-fit: cover
+}
+.camera-view .gemini-generated {
+    align-self: stretch;
+    height: auto;
+    aspect-ratio: 0.8;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+/* Biscuit Section (Top Left) */
+.buiscuit-up {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 25%;
+    max-width: 7rem;
+}
+
+/* Selected Image inside the camera frame */
+.selected-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camera-view .buiscuit-up {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: -1%;
+    transform: translate(-10%,0);
+    position: absolute;
+    top: 10%;
+    filter: drop-shadow(2px 2px 1px back);
+    max-width: 11rem;
+    width: 30%;
+}
+.camera-view .img {
+    align-self: stretch;
+    height: 157.37px;
+    margin-bottom: -14.4px;
+    margin-right: -22.14px;
+    margin-top: -6.4px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    filter: drop-shadow(2px 2px 1px back);
+}
+
+.center-effect-light{
+    border-radius: 40%;
+    filter: blur(178px);
+    background: linear-gradient(180deg, rgb(92, 141, 204) 0%, rgb(43, 91, 121),rgb(90, 171, 221) 100%);
+    flex: 1;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    flex-grow: 1;
+    width:70%;
+    height: 80%;
+    
+}

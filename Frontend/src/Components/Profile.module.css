@@ -1,0 +1,240 @@
+.backChild {
+	width: 1.5em;
+  margin-left: 5px;
+	position: relative;
+	max-height: 100%;
+	object-fit: contain;
+}
+.profileSetting {
+	position: relative;
+  width: auto;
+  height: auto;
+  font-weight: 550;
+}
+.profileSettingWrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0px 10px;
+}
+.back {
+	align-self: stretch;
+  width: 100%;
+  height: auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 9px 0px;
+	gap: 10px;
+	cursor: pointer;
+}
+.frameChild {
+  width: 27vw;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgba(175, 142, 142, 0.2);
+  border: 3.3px solid #fff;
+  box-sizing: border-box;
+}
+.joeJesusWrapper {
+	width: 112.2px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.profileSetting1 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	color: #d4c483;
+	padding: 3rem;
+}
+.basicDetails {
+	position: relative;
+	z-index: 1;
+}
+.frameGroup {
+	align-self: stretch;
+  width: 100%;
+	border-radius: 10px;
+	background-color: rgba(240, 234, 234, 0.18);
+	height: auto;
+	aspect-ratio: 6.7;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 7px 15px 10px 12px;
+	box-sizing: border-box;
+
+}
+.vectorWrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 0;
+}
+.details {
+	align-self: stretch;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+.logoutWrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+.materialSymbolslogoutIcon {
+	width: 24px;
+	position: relative;
+	height: 24px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+.logout {
+	align-self: stretch;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 44px;
+	gap: 9px;
+	color: #c34444;
+}
+.groupIcon {
+	width: 40px;
+	position: relative;
+	height: 26.1px;
+}
+.phbarcodeDuotone {
+	position: absolute;
+	top: calc(50% - 13px);
+	left: calc(50% - 24px);
+	width: 59px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 0px 6px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.vectorIcon {
+	position: absolute;
+	height: 35.26%;
+	width: 6.67%;
+	top: 33.93%;
+	right: 24.17%;
+	bottom: 30.8%;
+	left: 69.17%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+}
+.groupIcon1 {
+	position: absolute;
+	height: 35.26%;
+	width: 6.67%;
+	top: 33.93%;
+	right: 5.28%;
+	bottom: 30.8%;
+	left: 88.06%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	cursor: pointer;
+}
+.vectorIcon1 {
+	position: absolute;
+	height: 35.26%;
+	width: 8.33%;
+	top: 32.46%;
+	right: 85.28%;
+	bottom: 32.27%;
+	left: 6.39%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	cursor: pointer;
+}
+.groupIcon2 {
+	position: absolute;
+	height: 35.26%;
+	width: 6.67%;
+	top: 32.46%;
+	right: 69.17%;
+	bottom: 32.27%;
+	left: 24.17%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	cursor: pointer;
+}
+.navbar {
+	width: 100%;
+	position: relative;
+	height: 76px;
+}
+.navbarChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #406a81;
+  width: 100%;
+  height: 76px;
+}
+.navbarWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+.profile {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 4px 10px;
+	box-sizing: border-box;
+	gap: 10px;
+	text-align: left;
+	font-size: 1.03em;
+	color: #000;
+	font-family: Amarante;
+	overflow-x: hidden;  
+    overflow-y: scroll; /* Enable scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none;
+}
+
+.login_btn{
+padding: 15px;
+cursor: pointer;}
+
+profile ::-webkit-scrollbar {
+	display: none; }

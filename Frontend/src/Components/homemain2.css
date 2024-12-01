@@ -1,0 +1,759 @@
+.co-founder-1 {
+  	width: 3.331rem;
+  	position: relative;
+  	height: 3.331rem;
+  	object-fit: cover;
+}
+.co-founder-1-wrapper {
+  	position: absolute;
+  	top: 0rem;
+  	left: 0rem;
+  	height: 4.188rem;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: var(--padding-3xs);
+  	box-sizing: border-box;
+}
+.home-profile-preview-child {
+  	position: absolute;
+  	top: 1.105rem;
+  	left: 1.188rem;
+  	border-radius: 50%;
+  	background-color: rgba(175, 142, 142, 0.2);
+  	border: 1px solid var(--color-white);
+  	box-sizing: border-box;
+  	width: 2.25rem;
+  	height: 2.094rem;
+}
+.hello {
+  	position: relative;
+}
+.hello-wrapper {
+  	position: absolute;
+  	top: 0.514rem;
+  	left: 3.625rem;
+  	height: 1.831rem;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: var(--padding-3xs);
+  	box-sizing: border-box;
+}
+.joe-jesus-wrapper {
+  	position: absolute;
+  	top: 1.486rem;
+  	left: 3.625rem;
+  	height: 2.056rem;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: var(--padding-3xs);
+  	box-sizing: border-box;
+  	font-size: 0.813rem;
+  	color: #d4c483;
+  	font-family: var(--font-amarante);
+}
+.home-profile-preview {
+  	width: 8.25rem;
+  	position: relative;
+  	height: 4.188rem;
+}
+.profile-preview-container {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+}
+.tap-to-scan {
+  	margin: 0;
+}
+.tap-to-scan-container {
+  	position: absolute;
+  	top: 0rem;
+  	left: 0rem;
+  	display: inline-block;
+  	width: 6.25rem;
+  	height: 1.563rem;
+}
+.tap-to-scan-wrapper {
+  	width: 6.25rem;
+  	position: relative;
+  	height: 0.938rem;
+  	z-index: 0;
+}
+.gemini-generated-image-jnqbllj-icon {
+  	width: 13.188rem;
+  	position: relative;
+  	height: 3.675rem;
+  	object-fit: cover;
+}
+.base-of-animation {
+  	width: 25.375rem;
+  	margin: 0 !important;
+  	position: absolute;
+  	top: 6.688rem;
+  	left: calc(50% - 203px);
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	z-index: 1;
+}
+.lays-front-2 {
+  	width: 2.356rem;
+  	position: relative;
+  	height: 3.438rem;
+  	object-fit: cover;
+}
+.screenshot-2024-09-09-235845-r-icon {
+  	width: 5rem;
+  	position: relative;
+  	height: 6.688rem;
+  	object-fit: cover;
+}
+.designer-removebg-preview-2-icon {
+  	width: 1.963rem;
+  	position: relative;
+  	height: 3.438rem;
+  	object-fit: cover;
+}
+.hero-animation {
+  	width: 17.063rem;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 0rem var(--padding-6xs);
+  	box-sizing: border-box;
+  	gap: 3.125rem;
+  	z-index: 2;
+}
+.animation-wrapper {
+  	align-self: stretch;
+  	flex: 1;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	position: relative;
+  	gap: var(--gap-3xs);
+  	font-size: 1.089rem;
+  	color: #ffc815;
+  	font-family: var(--font-kavoon);
+}
+.profile-preview-container-parent {
+  	align-self: stretch;
+  	background: radial-gradient(50% 50% at 50% 50%, rgba(55, 119, 158, 0.88), rgba(23, 52, 64, 0.89)), linear-gradient(182.57deg, rgba(141, 147, 155, 0.61), #4c94c0 44%, #162423);
+  	height: 18.25rem;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	padding: 0.937rem 0.75rem;
+  	box-sizing: border-box;
+  	gap: var(--gap-3xs);
+}
+.up-line-child {
+  	width: 4.5rem;
+  	position: relative;
+  	border-top: 4px solid var(--color-black);
+  	box-sizing: border-box;
+  	height: 0.25rem;
+}
+.up-line {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+}
+.chocolate-icon {
+  	position: absolute;
+  	height: 57.98%;
+  	width: 30.69%;
+  	top: 17.02%;
+  	right: 4.86%;
+  	bottom: 25%;
+  	left: 64.45%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: contain;
+}
+.fooditem1-1-icon {
+  	position: absolute;
+  	height: 58.4%;
+  	width: 36.37%;
+  	top: 32.98%;
+  	right: 4.63%;
+  	bottom: 8.62%;
+  	left: 59.01%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: contain;
+}
+.search-1-icon {
+  	position: absolute;
+  	height: 146.06%;
+  	width: 90.49%;
+  	top: -6.38%;
+  	right: -40.8%;
+  	bottom: -39.68%;
+  	left: 50.31%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: contain;
+}
+.search {
+  	position: absolute;
+  	height: 22.34%;
+  	width: 45.01%;
+  	top: 19.15%;
+  	left: 7.95%;
+  	line-height: 1.25rem;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+}
+.to-discover {
+  	position: absolute;
+  	height: 22.34%;
+  	width: 66.24%;
+  	top: 41.49%;
+  	left: 14.91%;
+  	font-size: var(--font-size-mini);
+  	line-height: 1.25rem;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+}
+.chocolate-parent {
+  	flex: 1;
+  	position: relative;
+  	border-radius: var(--br-8xl);
+  	background-color: var(--color-whitesmoke-100);
+  	height: 5.875rem;
+  	overflow: hidden;
+}
+.barcode {
+  	position: absolute;
+  	width: 66.24%;
+  	top: 41.49%;
+  	left: 14.91%;
+  	font-size: var(--font-size-mini);
+  	line-height: 1.25rem;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+}
+.barcode-illustration-1-icon {
+  	position: absolute;
+  	height: 113.19%;
+  	width: 54.42%;
+  	top: -6.38%;
+  	right: -7.37%;
+  	bottom: -6.81%;
+  	left: 52.94%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: contain;
+}
+.frame-parent {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 1.062rem;
+  	font-size: var(--font-size-xl);
+  	font-family: var(--font-roboto);
+}
+.discover-child {
+  	width: 0.25rem;
+  	position: relative;
+  	height: 3.125rem;
+  	object-fit: contain;
+  	opacity: 0.69;
+}
+.the-power-of {
+  	color: var(--color-black);
+}
+.discover-the-power-container {
+  	flex: 1;
+  	position: relative;
+  	letter-spacing: 0.03em;
+  	line-height: 110%;
+  	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.11));
+  	text-shadow: 1px 0 0 rgba(212, 211, 211, 0.86), 0 1px 0 rgba(212, 211, 211, 0.86), -1px 0 0 rgba(212, 211, 211, 0.86), 0 -1px 0 rgba(212, 211, 211, 0.86);
+}
+.discover-the-power-of-balanced-wrapper {
+  	width: 15.563rem;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: var(--padding-3xs) 0rem;
+  	box-sizing: border-box;
+}
+.heart-food-icon {
+  	width: 7.688rem;
+  	position: relative;
+  	height: 5.875rem;
+}
+.heart-food-wrapper {
+  	align-self: stretch;
+  	width: 7.688rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+}
+.discover {
+  	align-self: stretch;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: var(--color-whitesmoke-100);
+  	height: 9.063rem;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0rem 0.562rem 1.625rem;
+  	box-sizing: border-box;
+  	gap: 0.437rem;
+  	font-size: 1.5rem;
+  	color: #ce3636;
+  	font-family: var(--font-jersey-15);
+}
+.recommendation1 {
+  	position: relative;
+  	letter-spacing: 0.06em;
+  	z-index: 1;
+}
+.viewall {
+  	position: relative;
+  	letter-spacing: 0.06em;
+  	z-index: 0;
+}
+.text {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: var(--gap-3xs);
+}
+.frame-child {
+  	width: 2.625rem;
+  	position: relative;
+  	height: 3.513rem;
+  	object-fit: cover;
+  	z-index: 0;
+}
+.vector-icon {
+  	width: 1.163rem;
+  	position: absolute;
+  	margin: 0 !important;
+  	top: -0.125rem;
+  	left: 3.875rem;
+  	height: 1.119rem;
+  	z-index: 1;
+}
+.vector-icon1 {
+  	width: 1.163rem;
+  	position: absolute;
+  	margin: 0 !important;
+  	top: -0.125rem;
+  	left: 3.875rem;
+  	height: 1.119rem;
+  	z-index: 2;
+}
+.frame-group {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.5rem;
+  	position: relative;
+  	gap: var(--gap-3xs);
+}
+.disano-oats {
+  	align-self: stretch;
+  	position: relative;
+  	display: inline-block;
+  	height: 0.75rem;
+  	flex-shrink: 0;
+}
+.item2 {
+  	width: 9.625rem;
+  	box-shadow: 0px 2px 5.2px rgba(0, 0, 0, 0.25);
+  	border-radius: 14px;
+  	background-color: var(--color-whitesmoke-300);
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: var(--padding-6xs) 1.187rem;
+  	box-sizing: border-box;
+  	gap: 0.562rem;
+}
+.item2-wrapper {
+  	align-self: stretch;
+  	overflow-x: auto;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	font-size: 0.688rem;
+  	font-family: var(--font-abhaya-libre);
+}
+.recommendation {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: center;
+  	padding: var(--padding-3xs);
+  	gap: var(--gap-3xs);
+}
+.recently-viewed {
+  	position: absolute;
+  	top: 0rem;
+  	left: 0rem;
+  	letter-spacing: 0.06em;
+  	display: inline-block;
+  	width: 6.563rem;
+  	height: 1.563rem;
+}
+.recenetly-views {
+  	width: 21.125rem;
+  	position: relative;
+  	height: 1.75rem;
+}
+.image-icon {
+  	position: absolute;
+  	top: 0.438rem;
+  	left: 2.125rem;
+  	border-radius: var(--br-11xs-3);
+  	width: 1.375rem;
+  	height: 2.75rem;
+  	object-fit: cover;
+}
+.diary-milk-silk-container {
+  	position: absolute;
+  	top: 3.563rem;
+  	left: 0.625rem;
+  	letter-spacing: 0.06em;
+  	display: inline-block;
+  	width: 5.063rem;
+  	height: 0.813rem;
+}
+.image-parent {
+  	width: 6.688rem;
+  	position: relative;
+  	border-radius: var(--br-4xs);
+  	background-color: var(--color-whitesmoke-200);
+  	height: 5.438rem;
+  	flex-shrink: 0;
+}
+.recently-view-main-inner {
+  	overflow-x: auto;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+}
+.recently-view-main {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	padding: var(--padding-7xs) var(--padding-3xs);
+  	gap: var(--gap-3xs);
+}
+.explore-by-categcategories {
+    display: flex;
+  	width: 12.625rem;
+  	position: relative;
+  	letter-spacing: 0.06em;
+  	display: inline-block;
+  	height: 0.938rem;
+  	flex-shrink: 0;
+}
+.explore-categories-header {
+  	align-self: stretch;
+    width: 100%;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: space-between;
+}
+.image-icon1 {
+  	width: 1.375rem;
+  	position: relative;
+  	border-radius: var(--br-11xs-3);
+  	height: 2.75rem;
+  	object-fit: cover;
+}
+.item-img-cat {
+  	align-self: stretch;
+  	border-radius: var(--br-2xs);
+  	background-color: var(--color-whitesmoke-300);
+  	height: 4.813rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: var(--padding-7xs) var(--padding-2xs);
+  	box-sizing: border-box;
+}
+.diary-breakfasts-container {
+  	flex: 1;
+  	position: relative;
+  	letter-spacing: 0.06em;
+}
+.cat-item-name {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	align-content: flex-start;
+}
+.image-wrapper {
+  	position: absolute;
+  	top: -0.187rem;
+  	left: 1.5rem;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: var(--padding-3xs);
+}
+.frame-wrapper {
+  	width: 6.688rem;
+  	position: relative;
+  	border-radius: var(--br-4xs);
+  	background-color: var(--color-whitesmoke-200);
+  	height: 6.813rem;
+  	flex-shrink: 0;
+}
+.cat-item-main-inner {
+  	overflow-x: auto;
+  	display: none;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+}
+.diary-breakfasts-container1 {
+  	width: 7rem;
+  	position: relative;
+  	letter-spacing: 0.06em;
+  	text-align: left;
+  	display: none;
+  	height: 1.625rem;
+  	flex-shrink: 0;
+}
+.cat-item-main {
+  	width: 5.875rem;
+  	border-radius: var(--br-4xs);
+  	height: 6.813rem;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: var(--gap-7xs);
+}
+.cat-item-main-wrapper {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	text-align: center;
+}
+.recently-view-main1 {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	padding: var(--padding-7xs) var(--padding-3xs);
+  	gap: var(--gap-5xs);
+}
+.slider {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	padding: 0.312rem var(--padding-2xs);
+  	gap: var(--gap-3xs);
+  	font-size: var(--font-size-xs);
+  	color: var(--color-black);
+  	font-family: var(--font-jejugothic);
+}
+.iphone-14-15-pro-max-1 {
+  	width: 100%;
+  	position: relative;
+  	background-color: var(--color-white);
+  	height: 58.25rem;
+  	overflow-y: auto;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	min-width: 22.5rem;
+  	text-align: left;
+  	font-size: 0.625rem;
+  	color: var(--color-white);
+  	font-family: var(--font-abeezee);
+}
+
+/* return (
+	<div className="iphone-14-15-pro-max-1">
+		  <div className="profile-preview-container-parent">
+				<div className="profile-preview-container">
+					  <div className="home-profile-preview">
+							<div className="co-founder-1-wrapper">
+								  <img className="co-founder-1" alt="" src="Co Founder 1.png" />
+							</div>
+							<div className="home-profile-preview-child" />
+							<div className="hello-wrapper">
+								  <div className="hello">Hello ,</div>
+							</div>
+							<div className="joe-jesus-wrapper">
+								  <div className="hello">{`Joe Jesus `}</div>
+							</div>
+					  </div>
+				</div>
+				<div className="animation-wrapper">
+					  <div className="tap-to-scan-wrapper">
+							<div className="tap-to-scan-container">
+								  <p className="tap-to-scan">Tap TO Scan</p>
+							</div>
+					  </div>
+					  <div className="base-of-animation">
+							<img className="gemini-generated-image-jnqbllj-icon" alt="" src="Gemini_Generated_Image_jnqblljnqblljnqb-removebg-preview 1.png" />
+					  </div>
+					  <div className="hero-animation">
+							<img className="lays-front-2" alt="" src="lays front 2.png" />
+							<img className="screenshot-2024-09-09-235845-r-icon" alt="" src="Screenshot_2024-09-09_235845-removebg-preview 3.png" />
+							<img className="designer-removebg-preview-2-icon" alt="" src="Designer-removebg-preview 2.png" />
+					  </div>
+				</div>
+		  </div>
+		  <div className="slider">
+				<div className="up-line">
+					  <div className="up-line-child" />
+				</div>
+				<div className="frame-parent">
+					  <div className="chocolate-parent">
+							<img className="chocolate-icon" alt="" src="Chocolate.png" />
+							<img className="fooditem1-1-icon" alt="" src="fooditem1 1.png" />
+							<img className="search-1-icon" alt="" src="search 1.png" />
+							<div className="search">Search</div>
+							<div className="to-discover">To Discover</div>
+					  </div>
+					  <div className="chocolate-parent">
+							<div className="search">Scan</div>
+							<div className="barcode">Barcode</div>
+							<img className="barcode-illustration-1-icon" alt="" src="barcode_illustration 1.png" />
+					  </div>
+				</div>
+				<div className="discover">
+					  <img className="discover-child" alt="" src="Line 1.svg" />
+					  <div className="discover-the-power-of-balanced-wrapper">
+							<div className="discover-the-power-container">
+								  <span>Discover</span>
+								  <span className="the-power-of"> The Power Of Balanced Nutrition </span>
+							</div>
+					  </div>
+					  <div className="heart-food-wrapper">
+							<img className="heart-food-icon" alt="" src="heart-food.svg" />
+					  </div>
+				</div>
+				<div className="recommendation">
+					  <div className="text">
+							<div className="recommendation1">{`Recommendation `}</div>
+							<div className="viewall">viewall</div>
+					  </div>
+					  <div className="item2-wrapper">
+							<div className="item2">
+								  <div className="frame-group">
+										<img className="frame-child" alt="" src="Frame 68.png" />
+										<img className="vector-icon" alt="" src="Vector.svg" />
+										<img className="vector-icon1" alt="" src="Vector.svg" />
+								  </div>
+								  <div className="disano-oats">Disano Oats</div>
+							</div>
+					  </div>
+				</div>
+				<div className="recently-view-main">
+					  <div className="recenetly-views">
+							<div className="recently-viewed">
+								  <p className="tap-to-scan">&nbsp;</p>
+								  <p className="tap-to-scan">Recently Viewed</p>
+							</div>
+					  </div>
+					  <div className="recently-view-main-inner">
+							<div className="image-parent">
+								  <img className="image-icon" alt="" src="image.png" />
+								  <div className="diary-milk-silk-container">
+										<p className="tap-to-scan">Diary MIlk Silk</p>
+								  </div>
+							</div>
+					  </div>
+				</div>
+				
+				<div className="recently-view-main1">
+					  <div className="explore-categories">
+							<div className="explore-by-categcategories">Best of food</div>
+					  </div>
+					  <div className="cat-item-main-wrapper">
+							<div className="cat-item-main">
+								  <div className="item-img-cat">
+										<img className="image-icon1" alt="" src="image.png" />
+								  </div>
+								  <div className="cat-item-name">
+										<div className="diary-breakfasts-container">
+											  <p className="tap-to-scan">{`Diary & breakfasts `}</p>
+										</div>
+								  </div>
+								  <div className="cat-item-main-inner">
+										<div className="frame-wrapper">
+											  <div className="image-wrapper">
+													<img className="image-icon1" alt="" src="image.png" />
+											  </div>
+										</div>
+								  </div>
+								  <div className="diary-breakfasts-container1">
+										<p className="tap-to-scan">{`Diary & breakfasts `}</p>
+								  </div>
+							</div>
+					  </div>
+				</div>
+		  </div>
+	</div>);
+}; */

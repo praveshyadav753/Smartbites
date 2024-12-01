@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    {% if success %}
+        <p style="color: green;">Product and related data added successfully!</p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <h2>Product Information</h2>
+        {{ product_form.as_p }}
+        
+        <h2>Nutrition Information</h2>
+        {{ nutrition_form.as_p }}
+        
+        <h2>Ingredients</h2>
+        {{ ingredient_formset.management_form }}
+        {% for form in ingredient_formset %}
+            {{ form.as_p }}
+        {% endfor %}
+        
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

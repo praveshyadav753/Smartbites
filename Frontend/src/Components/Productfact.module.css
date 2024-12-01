@@ -1,0 +1,518 @@
+
+body {
+	margin: 0; line-height: normal;
+
+	}
+.backChild {
+  	width: 30px;
+  	margin: 0 !important;
+	color:#000;
+  	max-height: 100%;
+  	object-fit: contain;
+  	z-index: 0;
+}
+
+.back {
+    background-color: white;
+  	align-self: stretch;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 14px 0px;
+  	position: relative;
+  	cursor: pointer;
+}
+.saltedPeanutsWith {
+  	flex: 1;
+  	position: relative;
+  	display: inline-block;
+  	height: 22.7px;
+}
+.heading {
+  	
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+	white-space: wrap;
+  	padding: 6px 6px;
+  	box-sizing: border-box;
+}
+.androidLarge5 h1,h2,h3{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.screenshot20240909235845RIcon {
+  	width: 71.1px;
+  	position: relative;
+  	height: 73.9px;
+  	object-fit: contain;
+}
+.gaugemeter{
+	width:100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.vectorIcon1 {
+  	width: 20.6px;
+  	position: relative;
+  	height: 21.9px;
+}
+.numStar {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	gap: 5px;
+  	z-index: 1;
+	width: 100%;
+}
+.vectorIcon2 {
+  	width: 23.9px;
+  	position: absolute;
+  	margin: 0 !important;
+  	top: 12.72px;
+  	left: 25.85px;
+  	height: 13.1px;
+  	object-fit: contain;
+  	z-index: 2;
+}
+.rating {
+  	display: flex;
+	width: 40%;
+	height: 100%;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	
+  	gap: 10px;
+}
+.itemRating {
+  	display: flex;
+	align-self: stretch;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1em 5px;
+  	gap: 8em;
+}
+.ratingContainerChild {
+  	align-self: stretch;
+  	position: relative;
+  	border-top: 1px solid #d2d2d2;
+  	box-sizing: border-box;
+  	height: 1px;
+}
+.pictureitem{
+	width:40%;
+	height: auto;
+}
+.reliability1Icon {
+  	width: 27.6px;
+  	position: relative;
+  	height: 26.4px;
+  	object-fit: cover;
+}
+.vectorIcon3 {
+  	width: 21.3px;
+  	position: relative;
+  	height: 21.3px;
+}
+.recomAdd {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 6px 10px;
+  	gap: 40px;
+}
+.ratingContainer {
+  	align-self: stretch;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 24px;
+  	background-color: #fafeff;
+  	box-sizing: border-box;
+  	
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 10px 10px;
+	  border-top: 4px solid #deedf0
+}
+
+.highlightFrame {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 10px 1px;
+  	font-family: JejuGothic;
+}
+.healthyFats {
+  	position: relative;
+}
+.halthyFat {
+  	width: fit-content;
+  	border-radius: 8px;
+  	background-color: #ddedd3;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 6px 11px;
+  	box-sizing: border-box;
+}
+.calories {
+	width: fit-content;
+  	border-radius: 8px;
+  	background-color: #f9d9d6;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 6px 11px;
+  	box-sizing: border-box;
+}
+.protein {
+	width: fit-content;
+  	border-radius: 8px;
+  	background-color: #fdfdfd;
+  	border: 1px solid #dadada;
+  	box-sizing: border-box;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 6px 11px;
+}
+.highlightcontainer{
+    display: flex;
+	flex-direction: column;
+	width: stretch;
+	height: auto;
+}
+.marquee {
+	overflow-x: scroll; 
+	white-space: nowrap; 
+	width: 100%; 
+	scroll-behavior: smooth;
+	
+ }
+/* .highlightItem {
+  	align-self: stretch;
+  	overflow-x: scroll;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: 18px;
+	scrollbar-width: none; 
+	-ms-overflow-style: none; 
+  	font-size: 12px;
+	height: 40px;
+} */
+ .highlightItem{
+	display: flex;
+	flex-direction: row;
+	gap: 18px;
+  white-space: nowrap; /* Ensure content is in one line */
+  animation: marque 10s linear infinite; 
+ }
+ @keyframes marque {
+	0% {
+	  transform: translateX(100%); /* Start from the right */
+	}
+	100% {
+	  transform: translateX(-100%); /* Move left and loop */
+	}
+  }
+.highlightItem::-webkit-scrollbar {
+	display: none; /* Hide scrollbar in Chrome, Safari, and newer Edge */
+  }
+  .marquee::-webkit-scrollbar {
+	display: none; /* Hide scrollbar in Chrome, Safari, and newer Edge */
+  }
+  .paused{
+	animation-play-state: paused;
+  }
+.frameChild {
+  	width: 363px;
+  	position: relative;
+  	border-top: 3px solid rgba(178, 172, 172, 0.1);
+  	box-sizing: border-box;
+  	height: 3px;
+}
+
+.nutrition {
+  	position: relative;
+  	font-weight: 600;
+}
+.button {
+  	width: 84px;
+  	border-radius: 11px;
+  	background-color: #7cacc3;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 7px 10px;
+  	box-sizing: border-box;
+  	cursor: pointer;
+	outline: none !important;
+	
+}
+button:hover{
+	background-color: #366980;
+}
+button:active{
+	background-color: #0e6b8a;
+}
+
+.buttonParent {
+  	display: flex;
+	width: 100%;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 10px 9px;
+  	gap: 10%;
+}
+
+
+.goodChild {
+  	position: absolute;
+  	top: 4px;
+  	left: 0px;
+  	border-radius: 50%;
+  	background-color: #2deb50;
+  	border: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 10.6px;
+  	height: 10px;
+}
+.good1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 16.34px;
+  	display: inline-block;
+  	width: 48.1px;
+  	height: 18px;
+}
+.good {
+  	width: 64.4px;
+  	position: relative;
+  	height: 18px;
+}
+.moderateChild {
+  	position: absolute;
+  	top: 4px;
+  	left: 0px;
+  	border-radius: 50%;
+  	background-color: #f4ef55;
+  	border: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 10.6px;
+  	height: 10px;
+}
+.moderate1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 16.34px;
+  	display: inline-block;
+  	width: 60.5px;
+  	height: 18px;
+}
+.moderate {
+  	width: 76.9px;
+  	position: relative;
+  	height: 18px;
+}
+.poorChild {
+  	position: absolute;
+  	top: 4px;
+  	left: 0px;
+  	border-radius: 50%;
+  	background-color: #ce3636;
+  	border: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 10.6px;
+  	height: 10px;
+}
+.goodParent {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: 15px;
+  	font-size: 13px;
+  	font-family: Inter;
+}
+
+.nutritionalQualityIndicator {
+	width: 100%;
+  display: flex;
+  align-items: center;
+   
+	position: relative;
+	letter-spacing: 0.06em;
+	display: inline-block;
+	flex-shrink: 0;
+}
+.indicator {
+  	position: relative;
+  	width: 100%;
+	height: auto;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+	padding: 5px 0;
+	gap: 0.4em;
+}
+.energyWrapper {
+  	width: 120px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	flex-wrap: wrap;
+  	align-content: center;
+  	padding: 5px 2px;
+  	box-sizing: border-box;
+}
+
+
+
+.energy {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: space-around;
+  	justify-items: space-between;
+}
+.nutritiontable{
+	width: 100%;
+    display: flex;
+	flex-direction: column;
+	
+}
+
+.totalFatWrapper {
+	width: 45%;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	
+  	padding: 5px 2px;
+  	box-sizing: border-box;
+}
+.kcal {
+	width: 100%;
+	position: relative;
+}
+.kcalWrapper {
+	width:25%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+.wrapper {
+    width: 25%;
+   	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.energyChild {
+	width: 3%;
+  	border-radius: 50%;
+  	background-color: #2deb50;
+  	border: 1px solid #fff;
+  	box-sizing: border-box;
+  	height: 10px;
+}
+
+
+
+.androidLarge5 {
+  	width: 100vw;
+	height: 100vh;
+  	position: relative;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+	justify-content: flex-start;  	
+	padding: 0px 9px;
+  	box-sizing: border-box;
+  	gap: 6px;
+  	text-align: left;
+  	font-size: 15px;
+  	color: #000;
+  	font-family: Inter;
+}
+.partition1{
+	width: 100%;
+	height:3px;
+	background-color: #eef1f1;
+}
+.partition{
+	width: 110%;
+	height:4px;
+	background-color: #eef1f1;
+	margin: 0 -10px;
+}
+.partition2{
+	width: 100%;
+	height:4px;
+	background-color: #e7e7e7;
+}
+/* styles.module.css */
+
+.productImage {
+  width: 100%;
+  height: auto;
+  transition: filter 1s ease-out; 
+}
+
+.productImage.loading {
+  filter: blur(10px);
+}
+
+.productImage.loaded {
+  filter: blur(0); 
+} 
+.notFound{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.loaderContainer{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}

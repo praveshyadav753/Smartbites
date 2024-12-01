@@ -1,0 +1,114 @@
+.login-wrapper{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.login-form{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.login-form input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    /* border: none; */
+    background-color: aliceblue;
+}
+
+.login-form button{
+
+    background: linear-gradient(rgba(16, 27, 29, 0.459) , rgba(94, 146, 151, 0.89));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    filter: drop-shadow(3px,3px,3px,0.3);
+}
+
+
+.partition-login{
+    width: 100%;
+    /* margin: 5px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+}
+.partition-line{
+    width: 40%;
+    height: 2px;
+    background-color: rgba(165, 165, 165, 0.425);
+    
+}
+.partition-text{
+    font-size: 14px;
+   
+}
+
+.alternate-login{
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.google-login{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 10px;
+    background-color: rgba(94, 146, 140,0.6);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.inputfield{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.glow{
+    
+    border-color: #5e9bfc;
+  box-shadow: 0 3px 8px rgba(86, 105, 156, 0.86);
+  width: fit-content;
+border-radius: 8px;
+box-sizing: border-box;
+}
+.footer-links{
+    display: flex;
+    /* text-decoration: underline; */
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+
+}

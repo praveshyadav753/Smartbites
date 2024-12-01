@@ -1,0 +1,51 @@
+
+.search-to-discover {
+  	position: relative;
+  	width: 90%;
+  	
+  	display: inline-block;
+}
+.search-type{
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 15px;
+    background:transparent;
+    width: 100%;
+}
+.search-analytics-1 {
+  	position: relative;
+  	
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.phbarcode-duotone-icon {
+  	position: relative;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.search-scan {
+  	/* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content:stretch;
+      border-radius: 15px;
+  	background-color: #d9d9d9;
+  	height: 100%;
+    padding: 5px;
+  	width: 100%;
+  	
+}
+  	
+.search-scan-parent {
+  	width: 100%;
+  	position: relative;
+  	height: 2.938rem;
+  	text-align: left;
+  	font-size: 1rem;
+  	color: #6b6262;
+  	font-family: var(--font-abel);
+}
+

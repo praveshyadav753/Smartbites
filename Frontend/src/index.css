@@ -1,0 +1,103 @@
+/* Root styles for mobile */
+html {
+  font-size: 16px; /* Base font size (can be adjusted) */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-text-size-adjust: 100%; /* Prevents mobile auto-adjusting text size */
+  box-sizing: border-box; /* Ensures consistent box model */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Ensures all elements use the same box-sizing */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Mobile-friendly fonts */
+  line-height: 1.5; /* Improved readability */
+  background-color: #f5f5f5; /* Light background color */
+  color: #333; /* Text color */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Ensure images and videos are responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.75rem; /* 28px */
+}
+
+
+p {
+  font-size: 1rem; /* 16px */
+  margin-bottom: 1rem;
+}
+
+/* Mobile-first media queries */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; 
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #5398f2;
+}
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #1c2972;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #f3f3f3;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+#root{
+overflow-x: hidden;  
+overflow-y: scroll; /* Enable scrolling */
+scrollbar-width: none; /* Hide scrollbar in Firefox */
+-ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
