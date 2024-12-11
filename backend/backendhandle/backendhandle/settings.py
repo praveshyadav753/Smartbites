@@ -1,5 +1,7 @@
+import os
 from pathlib import Path
 from datetime import timedelta
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,36 +11,33 @@ STATICFILES_DIRS = [
 
 # Quick-start development settings - unsuitable for production
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5j+j%_^t)p(8(as945of@cut!rjimt=_g1@920_tqhvn5!zfmt'
+SECRET_KEY = config('DJANGO_SECRET_KEY', default='fallback-secret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'coderzombie58@gmail.com'
-EMAIL_HOST_PASSWORD = 'euwx dbez fdli zcvq'
-DEFAULT_FROM_EMAIL = 'SmartBites <coderzombie58@gmail.com>'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = f'SmartBites <{EMAIL_HOST_USER}>'
 
 # Twilio settings
-TWILIO_ACCOUNT_SID = 'AC30a56d39cccd89cc65b7b2ebc5495312'
-TWILIO_AUTH_TOKEN = '440385ee294d95bc3ccd8ad6c7868440'
-TWILIO_PHONE_NUMBER = '+1801 784 4950'
-
-
-
+TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = config('TWILIO_AUTH_TOKEN')
+TWILIO_PHONE_NUMBER = config('TWILIO_PHONE_NUMBER')
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'loginprocess.authentication.JWTAuthentication',  # Custom JWT authentication
+        'loginprocess.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',  # Ensure only authenticated users can access views
+        'rest_framework.permissions.IsAuthenticated',
     ),
 }
 
@@ -73,19 +72,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS settings - updated for cookies
-# OLD: CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-]
-CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be included in CORS requests
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173').split(',')
+CORS_ALLOW_CREDENTIALS = True
 
-# Session settings
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
-SESSION_COOKIE_AGE = 1209600  # 2 weeks (in seconds)
-# NEW: Set cookies to be secure if in a production environment (commented for development)
-# SESSION_COOKIE_SECURE = True  # Uncomment for production with HTTPS
-# CSRF_COOKIE_SECURE = True  # Uncomment for production with HTTPS
+SESSION_COOKIE_AGE = 1209600  # 2 weeks
 
 ROOT_URLCONF = 'backendhandle.urls'
 
@@ -107,26 +98,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backendhandle.wsgi.application'
 
-# JWT settings - moved from the original location to include cookie considerations
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=400),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=10),
-    'ROTATE_REFRESH_TOKENS': True,  # Optional: Automatically issue a new refresh token when used
-    'BLACKLIST_AFTER_ROTATION': True,  # Optional: Blacklist old refresh tokens
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': SECRET_KEY,
     'AUTH_HEADER_TYPES': ('Bearer',),
-    # Include custom settings for token handling with cookies if needed
-    'AUTH_COOKIE': 'access_token',  # Custom cookie name for access token
-    'AUTH_COOKIE_HTTP_ONLY': True,  # Prevent JavaScript access to cookies
-    'AUTH_COOKIE_SECURE': False,  # Set to True in production with HTTPS
+    'AUTH_COOKIE': 'access_token',
+    'AUTH_COOKIE_HTTP_ONLY': True,
+    'AUTH_COOKIE_SECURE': config('AUTH_COOKIE_SECURE', default=False, cast=bool),
     'AUTH_COOKIE_SAMESITE': 'Lax',
 }
 
-CSRF_COOKIE_NAME = "csrftoken"  # This should match the name used in your frontend code
-CSRF_COOKIE_HTTPONLY = False 
-
-# Database setup remains unchanged
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -134,44 +119,27 @@ DATABASES = {
     }
 }
 
-# Password validation remains unchanged
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Authentication backends
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GoogleOAuth2',  # Google authentication backend
+    'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
-# Internationalization remains unchanged
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files remain unchanged
 STATIC_URL = 'static/'
-
-# Default primary key field type remains unchanged
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# External API keys remain unchanged
-NUTRITIONIX_API_KEY = '754add0100e66eef524a38f1fdcaa033'
-NUTRITIONIX_APP_ID = '9ec0faa0'
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173',  # Add your frontend URL here
-    # Add any other trusted origins you have
-]
+NUTRITIONIX_API_KEY = config('NUTRITIONIX_API_KEY')
+NUTRITIONIX_APP_ID = config('NUTRITIONIX_APP_ID')
+
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://localhost:5173').split(',')
