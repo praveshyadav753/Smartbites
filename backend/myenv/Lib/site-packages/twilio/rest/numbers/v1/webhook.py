@@ -77,6 +77,8 @@ class WebhookList(ListResource):
         """
         headers = values.of({"Content-Type": "application/x-www-form-urlencoded"})
 
+        headers["Accept"] = "application/json"
+
         payload = self._version.fetch(method="GET", uri=self._uri, headers=headers)
 
         return WebhookInstance(self._version, payload)
@@ -89,6 +91,8 @@ class WebhookList(ListResource):
         :returns: The fetched WebhookInstance
         """
         headers = values.of({"Content-Type": "application/x-www-form-urlencoded"})
+
+        headers["Accept"] = "application/json"
 
         payload = await self._version.fetch_async(
             method="GET", uri=self._uri, headers=headers

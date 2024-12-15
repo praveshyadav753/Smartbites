@@ -5,9 +5,9 @@ from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATICFILES_DIRS = [
-    BASE_DIR / "frontend" / "dist" / "assets",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "frontend" ,
+# ]
 
 # Quick-start development settings - unsuitable for production
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'info_response',
     'userprofile',
     'recentlyview',
+    'Usershop',
     'corsheaders',
     'django_otp',
     'social_django',
@@ -143,3 +144,8 @@ NUTRITIONIX_API_KEY = config('NUTRITIONIX_API_KEY')
 NUTRITIONIX_APP_ID = config('NUTRITIONIX_APP_ID')
 
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://localhost:5173').split(',')
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+CORS_ALLOW_CREDENTIALS = True

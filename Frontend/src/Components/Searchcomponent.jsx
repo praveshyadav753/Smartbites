@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
-import './search.css';
+import './css/search.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Search = ({ searchValue, handleSearchChange }) => {

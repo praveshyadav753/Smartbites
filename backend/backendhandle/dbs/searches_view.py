@@ -38,7 +38,8 @@ class ProductSearchView(APIView):
                 "barcode": product.barcode,
                 "name": product.name,
                 "category": product.category,
-                # Add other fields as needed
+                'image': product.image,
+
             }
             for product in products
         ]

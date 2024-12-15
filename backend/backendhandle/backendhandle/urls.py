@@ -13,6 +13,7 @@ urlpatterns = [
     path('info_response/', include('evalutiondata.urls')),
     path('recent/', include('recentlyview.urls')),
     path('profile/', include('userprofile.urls')),    
+    path('fetch-items/',include('Usershop.urls')),
 ]
 
 

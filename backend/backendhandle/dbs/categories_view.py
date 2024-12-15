@@ -90,7 +90,7 @@ class ProductListByCategoryView(APIView):
             product_data = []
             for product in products:
                 product_data.append({
-                    'id': product.barcode,
+                    'barcode': product.barcode,
                     'name': product.name,
                     'image': product.image if product.image else None,
                     'category': product.category,

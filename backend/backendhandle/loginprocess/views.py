@@ -136,11 +136,15 @@ from userprofile.models import UserProfile
 from datetime import timedelta
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view, permission_classes
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
-
+@method_decorator(csrf_exempt, name='dispatch')
 class RequestOTPView(APIView):
     permission_classes = [AllowAny]
-
+    
+    
     def post(self, request):
         email_or_phone = request.data.get('email_or_phone')
         is_resend = request.data.get('is_resend', False)
