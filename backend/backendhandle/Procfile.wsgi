@@ -1,1 +1,1 @@
-web: gunicorn backendhande.wsgi
+web: gunicorn backendhandle.wsgi
