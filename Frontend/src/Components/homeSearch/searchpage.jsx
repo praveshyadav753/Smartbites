@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Search from '../Searchcomponent';
-import '../css/searchPage.css';
+import '../css/searchpage.css';
 import { useNavigate } from 'react-router-dom';
 
 const SearchPage = () => {
