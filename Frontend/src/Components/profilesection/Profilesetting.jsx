@@ -7,32 +7,9 @@ import { useUser } from '../Usercontext';
 
 const Settings = () => {
     const navigate = useNavigate();
-    // const [profileData, setProfileData] = useState(null);
+   
     const { user, updateBasicDetails,authenticated} = useUser();
-    // const { isAuthenticated, logout } = useContext(AuthContext);
-
-    // Fetch user profile data when authenticated
-    // useEffect(() => {
-    //     if (isAuthenticated) {
-    //         const token = localStorage.getItem('access_token');
-    //         if (token) {
-    //             axios.get('http://localhost:8000/profile/profile/', {
-    //                 headers: {
-    //                     'Authorization': `Bearer ${token}`
-    //                 }
-    //             })
-    //             .then(response => {
-    //                 setProfileData(response.data); // Store user profile data
-    //             })
-    //             .catch(error => {
-    //                 console.log('Error fetching profile data:', error);
-    //             });
-    //         }
-    //     }
-    // }, [isAuthenticated]);
-
-    // Navigation callbacks
-    // console.log(profileData)
+    
     const onBackContainerClick = useCallback(() => {
         navigate(-1);
     }, [navigate]);

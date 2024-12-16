@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useCallback} from "react";
 import axios from "axios";
 import ShoppingLists from "./Listoption";
 import CartItem from "./cart";
 import "./shopinglist.css";
+import { useNavigate } from "react-router-dom";
 import styles from "../css/ShopList.module.css";
 
 const ShopList = () => {
   const [currentList, setCurrentList] = useState("Default List"); // Selected shopping list
   const [cart, setCart] = useState([]); // Cart items
   const [isLoading, setIsLoading] = useState(false); // Loading state
-
+  const navigate= useNavigate()
   // Fetch cart data from the server
   const fetchCart = () => {
     setIsLoading(true);
@@ -65,11 +66,14 @@ const ShopList = () => {
     setCurrentList(listName);
   };
 
+  const onBackContainerClick = useCallback(() => {
+          navigate(-1);
+      }, [navigate]);
   return (
     <>
       {/* Shopping List Selection */}
       <div class="mylist">
-        <img class="backChild" alt="" src="/scanimg/Arrow-black.svg"></img>
+        <img class="backChild" alt="" src="/scanimg/Arrow-black.svg" onClick={onBackContainerClick}></img>
         <div>
           <h3>My List</h3>
         </div>
