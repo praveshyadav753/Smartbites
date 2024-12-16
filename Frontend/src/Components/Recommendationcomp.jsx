@@ -4,7 +4,7 @@ import './css/Homemain.css';
 import './css/shimmer.css';
 import { useLocation } from 'react-router-dom';
 import { fetchWithAuth } from './api'; 
-import { useUser } from './UserContext'; 
+import { useUser } from './Usercontext'; 
 
 
 
