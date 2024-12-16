@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Gendercompo.css'; // Import your CSS for styling
+import '../css/gendercompo.css'; // Import your CSS for styling
 
 
 const GenderDropdown = ({ selectedGender, onGenderChange }) => {
