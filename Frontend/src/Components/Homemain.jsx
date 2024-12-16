@@ -1,10 +1,11 @@
 
 
 import { useCallback, useContext, useEffect, useState } from 'react';
-import './css/Homemain.css';
+// import './css/Homemain.css';
+import './css/Homemain.css'
 import  './scanner/scanner';
 import  './homeSearch/searchpage';
-import './css/Search.css';
+import './css/search.css';
 import  { Recommendation,RecentlyViewed, CategoryList} from './Recommendationcomp';
 import axios from 'axios';
 import './css/global.css';
