@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../css/medicalCondition.css';
+import '../css/medicalcondition.css';
+
 // import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';
