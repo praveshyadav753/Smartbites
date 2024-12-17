@@ -142,7 +142,9 @@ NUTRITIONIX_APP_ID = config('NUTRITIONIX_APP_ID')
 
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://localhost:5173').split(',')
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='smartbites-production.up.railway.app').split(',')
+
+
 
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
@@ -150,4 +152,14 @@ CORS_ALLOWED_ORIGINS = config(
 ).split(',')
 
 CORS_ALLOW_CREDENTIALS = True
+
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
