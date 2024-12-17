@@ -35,7 +35,7 @@ const Login = () => {
     if (validInputType) {
       setError('');
       try {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/request-otp/`, {
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/request-otp/`, {
           email_or_phone: phoneOrEmail,
           is_resend: false,
         }, {
@@ -58,7 +58,7 @@ const Login = () => {
   // Function to handle OTP verification
   const verifyOtp = async (otp) => {
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/verify-otp/`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/verify-otp/`, {
         email_or_phone: phoneOrEmail,
         otp,
       }, {

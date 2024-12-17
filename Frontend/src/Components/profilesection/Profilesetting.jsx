@@ -53,7 +53,7 @@ const handleLogout = async () => {
     const csrfToken = getCSRFToken(); // Function to get the CSRF token from cookies
   
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/logout/`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

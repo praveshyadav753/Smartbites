@@ -26,7 +26,7 @@ const Productfact = () => {
     const token = localStorage.getItem('access_token');
     const fetchProductDetails = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/fetch/products/${barcode}/nutrition/`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/fetch/products/${barcode}/nutrition/`,{
           credentials: 'include',
         });
       console.log('data fetched') 

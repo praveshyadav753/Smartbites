@@ -5,7 +5,7 @@ export const addToCart = async (barcode) => {
   console.log("Request received to add product to cart:", barcode);
   try {
     const response = await axios.post(
-      "${process.env.REACT_APP_API_URL}/fetch-items/api/cart/",
+      "${import.meta.env.VITE_API_URL}/fetch-items/api/cart/",
       { product_id: barcode },
       {
         withCredentials: true,  // Ensures cookies (like session cookie or JWT) are sent with the request

@@ -13,7 +13,7 @@
 //     // Function to fetch user data from API (on initial load)
 //     const fetchUserData = async () => {
 //         try {
-//             const response = await fetch(`${process.env.REACT_APP_API_URL}/profile/profile/', {
+//             const response = await fetch(`${import.meta.env.VITE_API_URL}/profile/profile/', {
 //                 credentials: 'include', // This ensures cookies are sent with the request
 //             });
 
@@ -89,7 +89,7 @@ export const UserProvider = ({ children }) => {
     // Function to fetch user data from API (on initial load or when user logs in)
     const fetchUserData = async () => {
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/profile/profile/`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/profile/profile/`, {
                 credentials: 'include', // This ensures cookies are sent with the request
             });
 

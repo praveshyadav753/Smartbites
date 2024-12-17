@@ -27,7 +27,7 @@ const MedicalCondition= () => {
 
         try {
             
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/profile/medical/`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/profile/medical/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',   // Ensures the backend knows you're sending JSON data

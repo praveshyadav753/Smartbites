@@ -40,7 +40,7 @@
 
         const encodedCategory = encodeURIComponent(category); // Encode category properly
         console.log("Encoded category:", encodedCategory);
-        axios.get(`${process.env.REACT_APP_API_URL}/dbs/category/${encodedCategory}/`, {
+        axios.get(`${import.meta.env.VITE_API_URL}/dbs/category/${encodedCategory}/`, {
           withCredentials: true
         })
           .then((response) => {
@@ -106,7 +106,7 @@
       setError('');
       try {
           const response = await fetch(
-              `${process.env.REACT_APP_API_URL}/dbs/search/?q=${encodeURIComponent(searchValue)}`, {
+              `${import.meta.env.VITE_API_URL}/dbs/search/?q=${encodeURIComponent(searchValue)}`, {
                   credentials: 'include',
               });
               if (!response.ok) {

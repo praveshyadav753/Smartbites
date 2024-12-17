@@ -17,7 +17,7 @@ export const Recommendation = () => {
   useEffect(() => {
     const fetchRecommendedProducts = async () => {
       try {
-        const data = await fetchWithAuth(`${process.env.REACT_APP_API_URL}/dbs/recommended/`);
+        const data = await fetchWithAuth(`${import.meta.env.VITE_API_URL}/dbs/recommended/`);
         // console.log(data);
         setRecommendedProducts(data.recommended_products);
         setLoading(false);

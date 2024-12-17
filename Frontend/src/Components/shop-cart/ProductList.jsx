@@ -6,7 +6,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get(`${process.env.REACT_APP_API_URL}/fetch-items/api/products/${currentList}/`, {
+//       .get(`${import.meta.env.VITE_API_URL}/fetch-items/api/products/${currentList}/`, {
 //         withCredentials: true,
 //       })
 //       .then((response) => {

@@ -93,7 +93,7 @@ export default Search;
 //         setError(null);
 
 //         try {
-//             const response = await fetch(`${process.env.REACT_APP_API_URL}/dbs/search/?q=${encodeURIComponent(searchValue)}`);
+//             const response = await fetch(`${import.meta.env.VITE_API_URL}/dbs/search/?q=${encodeURIComponent(searchValue)}`);
 //             if (!response.ok) {
 //                 throw new Error('Failed to fetch products.');
 //             }
