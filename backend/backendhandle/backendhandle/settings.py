@@ -5,18 +5,14 @@ from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# STATICFILES_DIRS = [
-#     BASE_DIR / "frontend" ,
-# ]
 
-# Quick-start development settings - unsuitable for production
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('DJANGO_SECRET_KEY', default='fallback-secret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -73,8 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173').split(',')
-CORS_ALLOW_CREDENTIALS = True
+
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_AGE = 1209600  # 2 weeks
@@ -143,9 +138,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 NUTRITIONIX_API_KEY = config('NUTRITIONIX_API_KEY')
 NUTRITIONIX_APP_ID = config('NUTRITIONIX_APP_ID')
 
+# ----------------------------
+
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://localhost:5173').split(',')
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+
+CORS_ALLOWED_ORIGINS = config(
+    'CORS_ALLOWED_ORIGINS',
+    default='https://smartbites-alpha.vercel.app'
+).split(',')
+
 CORS_ALLOW_CREDENTIALS = True
+
