@@ -15,7 +15,7 @@ const ShopList = () => {
   const fetchCart = () => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:8000/fetch-items/api/cart/`, { withCredentials: true })
+      .get(`${process.env.REACT_APP_API_URL}/fetch-items/api/cart/`, { withCredentials: true })
       .then((response) => {
         setCart(response.data.items || []); // Ensure cart is an array
         console.log("Fetched Cart Items:", response.data.items);
@@ -35,7 +35,7 @@ const ShopList = () => {
 
     axios
       .put(
-        `http://localhost:8000/fetch-items/api/cart/${cart_item_id}/`,
+        `${process.env.REACT_APP_API_URL}/fetch-items/api/cart/${cart_item_id}/`,
         { quantity: newQuantity },
         { withCredentials: true }
       )
@@ -53,7 +53,7 @@ const ShopList = () => {
   // Remove item from cart
   const removeFromCart = (cart_item_id) => {
     axios
-      .delete(`http://localhost:8000/fetch-items/api/cart/${cart_item_id}/`, { withCredentials: true })
+      .delete(`${process.env.REACT_APP_API_URL}/fetch-items/api/cart/${cart_item_id}/`, { withCredentials: true })
       .then(() => {
         // Update cart state by filtering out the removed item
         setCart((prevCart) => prevCart.filter((item) => item.id !== cart_item_id));

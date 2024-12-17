@@ -6,7 +6,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get(`http://localhost:8000/fetch-items/api/products/${currentList}/`, {
+//       .get(`${process.env.REACT_APP_API_URL}/fetch-items/api/products/${currentList}/`, {
 //         withCredentials: true,
 //       })
 //       .then((response) => {

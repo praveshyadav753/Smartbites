@@ -27,7 +27,7 @@ const MedicalCondition= () => {
 
         try {
             
-            const response = await fetch('http://localhost:8000/profile/medical/', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/profile/medical/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',   // Ensures the backend knows you're sending JSON data

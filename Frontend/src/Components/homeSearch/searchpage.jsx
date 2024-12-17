@@ -30,7 +30,7 @@ const SearchPage = () => {
         setError('');
         try {
             const response = await fetch(
-                `http://localhost:8000/dbs/search/?q=${encodeURIComponent(searchValue)}`, {
+                `${process.env.REACT_APP_API_URL}/dbs/search/?q=${encodeURIComponent(searchValue)}`, {
                     credentials: 'include',
                 });
                 if (!response.ok) {
@@ -120,7 +120,7 @@ export default SearchPage;
 //         setError(null);
 
 //         try {
-//             const response = await fetch(`http://localhost:8000/dbs/search/?q=${encodeURIComponent(searchValue)}`);
+//             const response = await fetch(`${process.env.REACT_APP_API_URL}/dbs/search/?q=${encodeURIComponent(searchValue)}`);
 //             if (!response.ok) {
 //                 throw new Error('Failed to fetch products.');
 //             }

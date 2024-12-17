@@ -22,7 +22,7 @@ const DietaryPreferences = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/profile/preferences/', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/profile/preferences/`, {
                 method: 'POST',
                 credentials: 'include', 
                 body: JSON.stringify(dietaryData),

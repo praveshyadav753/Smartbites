@@ -42,7 +42,7 @@ export async function fetchWithAuth(url, options = {}) {
 async function refreshSession() {
     try {
         // Send request to refresh the session
-        const response = await fetch('http://localhost:8000/api/session/refresh/', {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/session/refresh/`, {
             method: 'POST',
             credentials: 'include',  // Include cookies for session refresh
         });

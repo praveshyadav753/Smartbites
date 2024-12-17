@@ -79,7 +79,7 @@ const EditProfile = () => {
 
         try {
             // Send profile data to the backend (adjust the URL as needed)
-            const response = await fetch('http://localhost:8000/profile/update/', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/profile/update/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',  // Set Content-Type header to application/json
