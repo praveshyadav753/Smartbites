@@ -47,31 +47,45 @@ const Settings = () => {
     }, [navigate]);
 
     const handleLogout = async () => {
+        const csrfToken = getCSRFToken();
+    
+        if (!csrfToken || csrfToken.length !== 32) {
+            console.error('CSRF Token is missing or has incorrect length');
+            return;
+        }
+    
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRFToken': getCSRFToken(),
+                    'X-CSRFToken': csrfToken,
                 },
-                credentials: 'include',
+                credentials: 'include', // Include cookies for authentication
             });
-
+    
+            if (!response.ok) {
+                throw new Error(`Logout failed with status ${response.status}`);
+            }
+    
             const data = await response.json();
-            console.log(data.message);
+            console.log(data.message);  
             navigate('/login');
         } catch (error) {
             console.error('Error during logout:', error);
         }
     };
+    
 
     const getCSRFToken = () => {
         const csrfToken = document.cookie
             .split(';')
             .find(cookie => cookie.trim().startsWith('csrftoken='))
             ?.split('=')[1];
+        console.log('CSRFToken:', csrfToken);
         return csrfToken;
     };
+    
 
     return (
         <div className={styles.profile}>
