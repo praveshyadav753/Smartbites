@@ -125,6 +125,7 @@ export const UserProvider = ({ children }) => {
     const checkAuthenticationStatus = () => {
         const token = Cookies.get('access_token'); // Get token from cookies
         console.log('Checking if user is authenticated automatically')
+        console.log('token:', token);
         if (token) {
             // Optionally, you can verify the token by sending a request to the backend.
             // If valid, authenticate the user.
