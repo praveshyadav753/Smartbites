@@ -89,7 +89,6 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 import Cookies from 'js-cookie';  // Import the js-cookie library
 import { useNavigate } from 'react-router-dom';
 
-const navigate= useNavigate();
 // Create the UserContext
 const UserContext = createContext();
 // Custom hook to use the UserContext
@@ -99,10 +98,11 @@ export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [authenticated, setAuthenticated] = useState(false);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();  // Use `useNavigate` inside the component
 
     // Function to fetch user data from API
     const fetchUserData = async () => {
-    console.log("fetching user data");
+        console.log("fetching user data");
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/profile/profile/`, {
                 credentials: 'include', // Ensures cookies are sent with the request
@@ -122,26 +122,25 @@ export const UserProvider = ({ children }) => {
             setLoading(false);
         }
     };
-    const logincheck=()=>{
-        if(!authenticated)
-        {
-            navigate('/login')
-        }
-    }
 
     // Update authentication status in context
     const updateAuthenticationStatus = (status) => {
         setAuthenticated(status);
         if (status) {
-            fetchUserData();
+            fetchUserData();  // Fetch user data if logged in
         } else {
             setUser(null); // Clear user data when logged out
             Cookies.remove('access_token'); // Remove token from cookies on logout
         }
     };
 
-    // Handle user login with token
-   
+    // Handle user login check and redirect if not authenticated
+    const logincheck = () => {
+        if (!authenticated) {
+            navigate('/login');
+        }
+    };
+
     // Handle user logout
     const handleLogout = () => {
         Cookies.remove('access_token'); // Remove token from cookies
@@ -151,9 +150,11 @@ export const UserProvider = ({ children }) => {
     // Fetch user data when the component mounts or when authenticated status changes
     useEffect(() => {
         console.log('checking on mount');
-        logincheck();
-        fetchUserData();// Check if the user is authenticated on load
-    }, [authenticated]);
+        logincheck();  // Check if the user is authenticated on mount
+        if (authenticated) {
+            fetchUserData();  // Fetch user data only if authenticated
+        }
+    }, [authenticated, navigate]);  // Add navigate to the dependency array to avoid warnings
 
     // Update user basic details
     const updateBasicDetails = (updatedDetails) => {
