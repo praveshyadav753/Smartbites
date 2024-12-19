@@ -125,12 +125,14 @@ export const UserProvider = ({ children }) => {
             setLoading(false);
         }
     };
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    }
+    const getCookie = () => {
+        const accessToken = document.cookie
+          .split(';')
+          .find(cookie => cookie.trim().startsWith('access_token='))
+          ?.split('=')[1];
+        console.log('access_token:', accessToken)  
+        return accessToken;
+      };
     // Function to check if the user is authenticated (from cookies)
     const checkAuthenticationStatus = () => {
         const token = getCookie('access_token'); // Get token from cookies
