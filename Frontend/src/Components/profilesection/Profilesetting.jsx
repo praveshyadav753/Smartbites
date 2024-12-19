@@ -50,32 +50,44 @@ const Settings = () => {
     }, [navigate]);
 // _________________________logout________________________________________--__________________-
 const handleLogout = async () => {
-    const csrfToken = getCSRFToken(); // Function to get the CSRF token from cookies
+    const csrfToken = getCSRFToken(); // Function to get CSRF token from cookies
+    const navigate = useNavigate();  // Use React Router's navigate to redirect after logout
   
     try {
+      // Send a POST request to the logout endpoint with the CSRF token and credentials
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRFToken': csrfToken,  
+          'X-CSRFToken': csrfToken,  // Send CSRF token in headers
         },
-        credentials: 'include', 
+        credentials: 'include',  // Ensures cookies (like tokens) are sent along with the request
       });
   
+      // Parse the response to handle success
       const data = await response.json();
-      console.log(data.message);  
-      navigate('/login');
+  
+      if (response.ok) {
+        console.log(data.message);  // Show the success message from the backend
+        // Redirect to the login page after successful logout
+        navigate('/login');
+      } else {
+        // Handle error if the response isn't successful
+        console.error('Logout failed:', data.message || 'Unknown error');
+      }
     } catch (error) {
       console.error('Error during logout:', error);
     }
   };
-    const getCSRFToken = () => {
-        const csrfToken = document.cookie
-          .split(';')
-          .find(cookie => cookie.trim().startsWith('csrftoken='))
-          ?.split('=')[1];
-        console.log('CSRFToken:', csrfToken)  
-        return csrfToken;
+  
+  const getCSRFToken = () => {
+    const csrfToken = document.cookie
+      .split(';')
+      .find(cookie => cookie.trim().startsWith('csrftoken='))
+      ?.split('=')[1];
+    console.log('CSRFToken:', csrfToken);  
+    return csrfToken;
+  
       };
 
     // ________________________________________________________________________________________________________________-
