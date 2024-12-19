@@ -90,12 +90,6 @@ import Cookies from 'js-cookie';  // Import the js-cookie library
 
 // Create the UserContext
 const UserContext = createContext();
-const accessToken = Cookies.get('access_token');
-const refreshToken = Cookies.get('refresh_token');
-
-// Print the tokens to the console
-console.log('Access Token:', accessToken);
-console.log('Refresh Token:', refreshToken);
 // Custom hook to use the UserContext
 export const useUser = () => useContext(UserContext);
 
@@ -106,6 +100,7 @@ export const UserProvider = ({ children }) => {
 
     // Function to fetch user data from API
     const fetchUserData = async () => {
+    console.log("fetching user data");
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/profile/profile/`, {
                 credentials: 'include', // Ensures cookies are sent with the request
@@ -125,27 +120,7 @@ export const UserProvider = ({ children }) => {
             setLoading(false);
         }
     };
-    const getCookie = () => {
-        const accessToken = document.cookie
-          .split(';')
-          .find(cookie => cookie.trim().startsWith('access_token='))
-          ?.split('=')[1];
-        console.log('access_token:', accessToken)  
-        return accessToken;
-      };
-    // Function to check if the user is authenticated (from cookies)
-    const checkAuthenticationStatus = () => {
-        const token = getCookie('access_token'); // Get token from cookies
-        console.log('Checking if user is authenticated automatically')
-        console.log('token:', token);
-        if (token) {
-            // Optionally, you can verify the token by sending a request to the backend.
-            // If valid, authenticate the user.
-            setAuthenticated(true);
-        } else {
-            setAuthenticated(false);
-        }
-    };
+   
 
     // Update authentication status in context
     const updateAuthenticationStatus = (status) => {
