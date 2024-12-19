@@ -120,10 +120,15 @@ export const UserProvider = ({ children }) => {
             setLoading(false);
         }
     };
-
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
     // Function to check if the user is authenticated (from cookies)
     const checkAuthenticationStatus = () => {
-        const token = Cookies.get('access_token'); // Get token from cookies
+        const token = getCookie('access_token'); // Get token from cookies
         console.log('Checking if user is authenticated automatically')
         console.log('token:', token);
         if (token) {
