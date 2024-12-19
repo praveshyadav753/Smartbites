@@ -90,7 +90,12 @@ import Cookies from 'js-cookie';  // Import the js-cookie library
 
 // Create the UserContext
 const UserContext = createContext();
+const accessToken = Cookies.get('access_token');
+const refreshToken = Cookies.get('refresh_token');
 
+// Print the tokens to the console
+console.log('Access Token:', accessToken);
+console.log('Refresh Token:', refreshToken);
 // Custom hook to use the UserContext
 export const useUser = () => useContext(UserContext);
 
