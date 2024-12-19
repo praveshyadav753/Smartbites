@@ -87,7 +87,9 @@
 
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import Cookies from 'js-cookie';  // Import the js-cookie library
+import { useNavigate } from 'react-router-dom';
 
+const navigate= useNavigate();
 // Create the UserContext
 const UserContext = createContext();
 // Custom hook to use the UserContext
@@ -120,7 +122,12 @@ export const UserProvider = ({ children }) => {
             setLoading(false);
         }
     };
-   
+    const logincheck=()=>{
+        if(!authenticated)
+        {
+            navigate('/login')
+        }
+    }
 
     // Update authentication status in context
     const updateAuthenticationStatus = (status) => {
@@ -134,11 +141,7 @@ export const UserProvider = ({ children }) => {
     };
 
     // Handle user login with token
-    const handleLogin = (token) => {
-        Cookies.set('access_token', token, { expires: 7, secure: true, sameSite: 'Strict' }); // Store token in cookies
-        updateAuthenticationStatus(true); // Mark as authenticated
-    };
-
+   
     // Handle user logout
     const handleLogout = () => {
         Cookies.remove('access_token'); // Remove token from cookies
@@ -148,9 +151,9 @@ export const UserProvider = ({ children }) => {
     // Fetch user data when the component mounts or when authenticated status changes
     useEffect(() => {
         console.log('checking on mount');
-        checkAuthenticationStatus();
+        logincheck();
         fetchUserData();// Check if the user is authenticated on load
-    }, []);
+    }, [authenticated]);
 
     // Update user basic details
     const updateBasicDetails = (updatedDetails) => {
@@ -167,7 +170,6 @@ export const UserProvider = ({ children }) => {
         loading,
         updateBasicDetails,
         updateAuthenticationStatus,
-        handleLogin,
         handleLogout,
     };
 
