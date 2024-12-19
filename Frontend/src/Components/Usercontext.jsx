@@ -123,7 +123,8 @@ export const UserProvider = ({ children }) => {
 
     // Function to check if the user is authenticated (from cookies)
     const checkAuthenticationStatus = () => {
-        const token = Cookies.get('authToken'); // Get token from cookies
+        const token = Cookies.get('access_token'); // Get token from cookies
+        console.log('Checking if user is authenticated automatically')
         if (token) {
             // Optionally, you can verify the token by sending a request to the backend.
             // If valid, authenticate the user.
@@ -140,24 +141,25 @@ export const UserProvider = ({ children }) => {
             fetchUserData();
         } else {
             setUser(null); // Clear user data when logged out
-            Cookies.remove('authToken'); // Remove token from cookies on logout
+            Cookies.remove('access_token'); // Remove token from cookies on logout
         }
     };
 
     // Handle user login with token
     const handleLogin = (token) => {
-        Cookies.set('authToken', token, { expires: 7, secure: true, sameSite: 'Strict' }); // Store token in cookies
+        Cookies.set('access_token', token, { expires: 7, secure: true, sameSite: 'Strict' }); // Store token in cookies
         updateAuthenticationStatus(true); // Mark as authenticated
     };
 
     // Handle user logout
     const handleLogout = () => {
-        Cookies.remove('authToken'); // Remove token from cookies
+        Cookies.remove('access_token'); // Remove token from cookies
         updateAuthenticationStatus(false); // Mark as logged out
     };
 
     // Fetch user data when the component mounts or when authenticated status changes
     useEffect(() => {
+        console.log('checking on mount');
         checkAuthenticationStatus(); // Check if the user is authenticated on load
     }, []);
 
