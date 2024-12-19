@@ -30,14 +30,14 @@ const HomeView = () => {
         navigate('/scanner'); 
     }, [navigate]);
   	
-  	useEffect(()=>{
-		if(!authenticated)
-		{
-	     navigate('/login')
-		}
-	},[authenticated],setTimeout(() => {
+  	// useEffect(()=>{
+	// 	if(!authenticated)
+	// 	{
+	//      navigate('/login')
+	// 	}
+	// },[authenticated],setTimeout(() => {
 		
-	}, 60000));
+	// }, 60000));
   	const onVectorIconClick = useCallback(() => {
     		const anchor = document.querySelector("[data-scroll-to='sliderContainer']");
     		if(anchor) {
@@ -77,7 +77,7 @@ const HomeView = () => {
 
 	 
 	  const handleCategorySelect = (category) => {
-		navigate('/food/${category}');
+		navigate(`/food/${category}`);
 		console.log(`category: ${category}`);}
 		
 		

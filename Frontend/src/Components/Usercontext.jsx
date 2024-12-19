@@ -123,6 +123,26 @@ export const UserProvider = ({ children }) => {
         }
     };
 
+    const checkAuthenticationStatus = async () => {
+        try {
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/status/`, {
+                withCredentials: true,  // Ensure cookies are sent
+            });
+
+            if (response.status === 200) {
+                setAuthenticated(true);
+                fetchUserData();  // Fetch user data only if authenticated
+            } else {
+                setAuthenticated(false);
+                navigate('/login');
+            }
+        } catch (error) {
+            console.error('Error during authentication status check:', error);
+            navigate('/login');
+            setAuthenticated(false);
+        }
+    };
+
     // Update authentication status in context
     const updateAuthenticationStatus = (status) => {
         setAuthenticated(status);
@@ -135,26 +155,19 @@ export const UserProvider = ({ children }) => {
     };
 
     // Handle user login check and redirect if not authenticated
-    const logincheck = () => {
-        if (!authenticated) {
-            navigate('/login');
-        }
-    };
-
-    // Handle user logout
-    const handleLogout = () => {
-        Cookies.remove('access_token'); // Remove token from cookies
-        updateAuthenticationStatus(false); // Mark as logged out
-    };
+    
+   
 
     // Fetch user data when the component mounts or when authenticated status changes
     useEffect(() => {
-        console.log('checking on mount');
-        logincheck();  // Check if the user is authenticated on mount
-        if (authenticated) {
-            fetchUserData();  // Fetch user data only if authenticated
-        }
-    }, [authenticated, navigate]);  // Add navigate to the dependency array to avoid warnings
+        const checkAuth = async () => {
+            setLoading(true);
+            await checkAuthenticationStatus();  // Check if the user is authenticated
+            setLoading(false);
+        };
+        checkAuth();
+    }, [navigate]);  // Re-run only when `navigate` changes
+ // Add navigate to the dependency array to avoid warnings
 
     // Update user basic details
     const updateBasicDetails = (updatedDetails) => {
@@ -171,7 +184,6 @@ export const UserProvider = ({ children }) => {
         loading,
         updateBasicDetails,
         updateAuthenticationStatus,
-        handleLogout,
     };
 
     return (
