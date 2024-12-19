@@ -173,7 +173,8 @@ export const UserProvider = ({ children }) => {
     // Fetch user data when the component mounts or when authenticated status changes
     useEffect(() => {
         console.log('checking on mount');
-        checkAuthenticationStatus(); // Check if the user is authenticated on load
+        checkAuthenticationStatus();
+        fetchUserData();// Check if the user is authenticated on load
     }, []);
 
     // Update user basic details
