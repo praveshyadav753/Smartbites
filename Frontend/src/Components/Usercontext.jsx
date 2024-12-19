@@ -88,7 +88,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import Cookies from 'js-cookie';  // Import the js-cookie library
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 // Create the UserContext
 const UserContext = createContext();
 // Custom hook to use the UserContext
