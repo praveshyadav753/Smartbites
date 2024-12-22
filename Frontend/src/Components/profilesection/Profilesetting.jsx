@@ -54,12 +54,12 @@ const Settings = () => {
                 Cookies.remove('refresh_token'); // Clear refresh token
                 Cookies.remove('csrf_token'); // Clear CSRF token
                 // window.location.href = '/login'; // Redirect to login
-        const csrfToken = getCSRFToken();
+        // const csrfToken = getCSRFToken();
     
-        if (!csrfToken || csrfToken.length !== 32) {
-            console.error('CSRF Token is missing or has incorrect length');
-            return;
-        }
+        // if (!csrfToken || csrfToken.length !== 32) {
+        //     console.error('CSRF Token is missing or has incorrect length');
+        //     return;
+        // }
     
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
