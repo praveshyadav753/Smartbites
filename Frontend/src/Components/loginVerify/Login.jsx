@@ -59,7 +59,7 @@ const Login = () => {
   const verifyOtp = async (otp) => {
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/verify-otp/`, {
-        email_or_phone: phoneOrEmail,
+        email_or_phone: phoneOrEmail, 
         otp,
       }, {
         withCredentials: true, // Ensure cookies are included in the request
