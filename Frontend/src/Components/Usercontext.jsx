@@ -37,6 +37,13 @@ export const UserProvider = ({ children }) => {
         }
     };
 
+    const logoutAndRedirect = () => {
+        Cookies.remove('access_token'); // Clear access token
+        Cookies.remove('refresh_token'); // Clear refresh token
+        Cookies.remove('csrf_token'); // Clear CSRF token
+        window.location.href = '/login'; // Redirect to login
+    };
+
     // Function to handle token refresh
     const handleTokenRefresh = async () => {
         try {
@@ -59,6 +66,7 @@ export const UserProvider = ({ children }) => {
             }
         } catch (error) {
             console.error('Error refreshing token:', error);
+            logoutAndRedirect();
             navigate('/login');
             setAuthenticated(false);
         }

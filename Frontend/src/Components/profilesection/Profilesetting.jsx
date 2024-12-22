@@ -47,6 +47,7 @@ const Settings = () => {
     }, [navigate]);
 
     const handleLogout = async () => {
+        console.log('Try LOGOUT');
 
          Cookies.remove('access_token'); // Clear access token
                 Cookies.remove('refresh_token'); // Clear refresh token
