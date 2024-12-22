@@ -2,6 +2,7 @@ import { useCallback, useState, useEffect, useContext } from 'react';
 import styles from '../css/Profile.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../Usercontext';
+import Cookies from 'js-cookie'; 
 
 const Settings = () => {
     const navigate = useNavigate();
