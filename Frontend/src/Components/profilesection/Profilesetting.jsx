@@ -47,6 +47,11 @@ const Settings = () => {
     }, [navigate]);
 
     const handleLogout = async () => {
+
+         Cookies.remove('access_token'); // Clear access token
+                Cookies.remove('refresh_token'); // Clear refresh token
+                Cookies.remove('csrf_token'); // Clear CSRF token
+                window.location.href = '/login'; // Redirect to login
         const csrfToken = getCSRFToken();
     
         if (!csrfToken || csrfToken.length !== 32) {
