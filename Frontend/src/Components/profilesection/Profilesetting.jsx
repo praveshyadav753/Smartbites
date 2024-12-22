@@ -53,7 +53,7 @@ const Settings = () => {
          Cookies.remove('access_token'); // Clear access token
                 Cookies.remove('refresh_token'); // Clear refresh token
                 Cookies.remove('csrf_token'); // Clear CSRF token
-                window.location.href = '/login'; // Redirect to login
+                // window.location.href = '/login'; // Redirect to login
         const csrfToken = getCSRFToken();
     
         if (!csrfToken || csrfToken.length !== 32) {
@@ -66,7 +66,7 @@ const Settings = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRFToken': csrfToken,
+                    // 'X-CSRFToken': csrfToken,
                 },
                 credentials: 'include', // Include cookies for authentication
             });
