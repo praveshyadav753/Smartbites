@@ -1,12 +1,14 @@
 import { useCallback, useState, useEffect, useContext } from 'react';
 import styles from '../css/Profile.module.css';
 import { useNavigate } from 'react-router-dom';
-import { useUser } from '../Usercontext';
+import { useUser} from '../Usercontext';
 import Cookies from 'js-cookie'; 
+import { UserProvider } from '../Usercontext';
+
 
 const Settings = () => {
     const navigate = useNavigate();
-    const { user, updateBasicDetails, authenticated } = useUser();
+    const { user, updateBasicDetails, authenticated,handleLogout } = useUser();
 
     const onBackContainerClick = useCallback(() => {
         navigate(-1);
@@ -47,33 +49,36 @@ const Settings = () => {
         navigate('/login');
     }, [navigate]);
 
-    const handleLogout = async () => {
-        console.log('Try LOGOUT');
+    // const handleLogout = async () => {
+    //     console.log('Try LOGOUT');
 
         
                
     
-        try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'X-CSRFToken': csrfToken,
-                },
-                credentials: 'include', // Include cookies for authentication
-            });
+    //     try {
+    //         // const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value; 
+
+        
+    //         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'X-CSRFToken': csrfToken,
+    //             },
+    //             credentials: 'include', // Include cookies for authentication
+    //         });
     
-            if (!response.ok) {
-                throw new Error(`Logout failed with status ${response.status}`);
-            }
+    //         if (!response.ok) {
+    //             throw new Error(`Logout failed with status ${response.status}`);
+    //         }
     
-            const data = await response.json();
-            console.log(data.message);  
-            navigate('/login');
-        } catch (error) {
-            console.error('Error during logout:', error);
-        }
-    };
+    //         const data = await response.json();
+    //         console.log(data.message);  
+    //         navigate('/login');
+    //     } catch (error) {
+    //         console.error('Error during logout:', error);
+    //     }
+    // };
     
 
     const getCSRFToken = () => {
