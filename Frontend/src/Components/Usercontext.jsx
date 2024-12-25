@@ -99,10 +99,12 @@ const handleLogout = async () => {
                 fetchUserData();
             } else {
                 console.error('Invalid refresh token response:', refreshResponse.data);
+                setAuthenticated(false);
                 handleLogout();
             }
         } catch (error) {
             console.error('Error refreshing token:', error);
+            setAuthenticated(false);
             handleLogout();
         }
     };
