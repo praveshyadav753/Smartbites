@@ -78,7 +78,7 @@ const handleLogout = async () => {
 
         const data = await response.json();
         console.log(data.message);  
-        navigate('/login');
+        setAuthenticated(false);
     } catch (error) {
         console.error('Error during logout:', error);
     }

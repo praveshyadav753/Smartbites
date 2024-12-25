@@ -3,7 +3,6 @@ import '../css/gendercompo.css'; // Import your CSS for styling
 
 
 const GenderDropdown = ({ selectedGender, onGenderChange }) => {
-  const { user, updateBasicDetails ,updateAuthenticationStatus} = useUser();
   const genders = [
     { id: 'Male', img: './scanimg/recommendations/gender-men.png', alt: 'Male' },
     { id: 'Female', img: './scanimg/recommendations/gender-female.jpg', alt: 'Female' },

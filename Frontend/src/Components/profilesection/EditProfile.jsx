@@ -198,7 +198,7 @@ const EditProfile = () => {
                         </div>
                         {isAgeDropdownOpen && (
                             <div className="dropdown-content">
-                                <AgeRangeSlider min={0} max={100} value={user.age} onChange={setAge} />
+                                <AgeRangeSlider min={0} max={100} value={age} onChange={setAge} />
                             </div>
                         )}
                     </div>

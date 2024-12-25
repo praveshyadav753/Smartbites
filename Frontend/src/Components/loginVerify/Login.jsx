@@ -67,9 +67,7 @@ const Login = () => {
       });
 
       console.log(response.data.message);
-      const csrfToken = response.headers['x-csrftoken'];
-      console.log("HEADER:",response.headers);
-            console.log(csrfToken);
+      const csrfToken = response.data.csrf;
       if (csrfToken) {
         // Store CSRF token in a cookie for future requests
         Cookies.set('csrftoken', csrfToken, { path: '/', secure: true, sameSite: 'Strict' });
