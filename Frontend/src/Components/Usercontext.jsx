@@ -117,7 +117,7 @@ const handleLogout = async () => {
             if (response.status === 200) {
                 setAuthenticated(true);
                 fetchUserData();
-            } else if (response.status === 401) {
+            } else if (response.status === 401||response.status === 403) {
                 await handleTokenRefresh();
             } else {
                 console.error('Unexpected status:', response.status);
@@ -125,7 +125,7 @@ const handleLogout = async () => {
                 setAuthenticated(false);
             }
         } catch (error) {
-            if (error.response && error.response.status === 401) {
+            if (error.response && error.response.status === 401 ||error.response.status === 403) {
                 await handleTokenRefresh();
             } else {
                 console.error('Error during authentication status check:', error);
