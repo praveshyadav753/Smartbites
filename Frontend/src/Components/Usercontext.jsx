@@ -87,51 +87,45 @@ const handleLogout = async () => {
 
     // Function to handle token refresh
     const handleTokenRefresh = async () => {
-        console.log("Refreshing token");
         try {
             const refreshResponse = await axios.post(
                 `${import.meta.env.VITE_API_URL}/api/token/refresh/`,
                 {},
-                {
-                    withCredentials: true, // Ensure cookies are sent
-                }
+                { withCredentials: true }
             );
-
-            if (refreshResponse.status === 200) {
-                // Refresh successful
+    
+            if (refreshResponse.status === 200 && refreshResponse.data.access) {
                 setAuthenticated(true);
-                fetchUserData(); // Fetch user data after token refresh
+                fetchUserData();
             } else {
-                // If refresh fails, navigate to login
-                navigate('/login');
-                setAuthenticated(false);
+                console.error('Invalid refresh token response:', refreshResponse.data);
+                handleLogout();
             }
         } catch (error) {
             console.error('Error refreshing token:', error);
             handleLogout();
-            navigate('/login');
-            setAuthenticated(false);
         }
     };
+    
 
     const checkAuthenticationStatus = async () => {
         try {
             const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/status/`, {
-                withCredentials: true, // Ensure cookies are sent
+                withCredentials: true,
             });
-
+        
             if (response.status === 200) {
                 setAuthenticated(true);
-                fetchUserData(); // Fetch user data only if authenticated
-            } else {
-                // If not authenticated, attempt token refresh
-                console.log("calling token refresh function")
+                fetchUserData();
+            } else if (response.status === 401) {
                 await handleTokenRefresh();
+            } else {
+                console.error('Unexpected status:', response.status);
+                navigate('/login');
+                setAuthenticated(false);
             }
         } catch (error) {
             if (error.response && error.response.status === 401) {
-                // If unauthorized, try refreshing the token
-                console.log("calling token refresh function")
                 await handleTokenRefresh();
             } else {
                 console.error('Error during authentication status check:', error);
@@ -139,6 +133,7 @@ const handleLogout = async () => {
                 setAuthenticated(false);
             }
         }
+        
     };
 
     // Update authentication status in context
