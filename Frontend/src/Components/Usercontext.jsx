@@ -87,6 +87,7 @@ const handleLogout = async () => {
 
     // Function to handle token refresh
     const handleTokenRefresh = async () => {
+        
         try {
             const refreshResponse = await axios.post(
                 `${import.meta.env.VITE_API_URL}/api/token/refresh/`,
@@ -120,7 +121,7 @@ const handleLogout = async () => {
                 setAuthenticated(true);
                 fetchUserData();
             } else if (response.status === 401||response.status === 403) {
-                await handleTokenRefresh();
+                // await handleTokenRefresh();
             } else {
                 console.error('Unexpected status:', response.status);
                 navigate('/login');
@@ -128,7 +129,7 @@ const handleLogout = async () => {
             }
         } catch (error) {
             if (error.response && error.response.status === 401 ||error.response.status === 403) {
-                await handleTokenRefresh();
+                // await handleTokenRefresh();
             } else {
                 console.error('Error during authentication status check:', error);
                 navigate('/login');
