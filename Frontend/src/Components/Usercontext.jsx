@@ -121,7 +121,7 @@ const handleLogout = async () => {
                 setAuthenticated(true);
                 fetchUserData();
             } else if (response.status === 401||response.status === 403) {
-                // await handleTokenRefresh();
+                await handleTokenRefresh();
             } else {
                 console.error('Unexpected status:', response.status);
                 navigate('/login');
@@ -129,7 +129,7 @@ const handleLogout = async () => {
             }
         } catch (error) {
             if (error.response && error.response.status === 401 ||error.response.status === 403) {
-                // await handleTokenRefresh();
+                await handleTokenRefresh();
             } else {
                 console.error('Error during authentication status check:', error);
                 navigate('/login');
@@ -146,7 +146,7 @@ const handleLogout = async () => {
             fetchUserData(); // Fetch user data if logged in
         } else {
             setUser(null); // Clear user data when logged out
-            Cookies.remove('access_token'); // Remove token from cookies on logout
+           
         }
     };
 
