@@ -62,6 +62,7 @@ const handleLogout = async () => {
     
     try {
         const csrfToken = Cookies.get('csrftoken');
+        console.log(csrfToken);
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/logout/`, {
             method: 'POST',
             headers: {
@@ -86,6 +87,7 @@ const handleLogout = async () => {
 
     // Function to handle token refresh
     const handleTokenRefresh = async () => {
+        console.log("Refreshing token");
         try {
             const refreshResponse = await axios.post(
                 `${import.meta.env.VITE_API_URL}/api/token/refresh/`,
@@ -123,11 +125,13 @@ const handleLogout = async () => {
                 fetchUserData(); // Fetch user data only if authenticated
             } else {
                 // If not authenticated, attempt token refresh
+                console.log("calling token refresh function")
                 await handleTokenRefresh();
             }
         } catch (error) {
             if (error.response && error.response.status === 401) {
                 // If unauthorized, try refreshing the token
+                console.log("calling token refresh function")
                 await handleTokenRefresh();
             } else {
                 console.error('Error during authentication status check:', error);
