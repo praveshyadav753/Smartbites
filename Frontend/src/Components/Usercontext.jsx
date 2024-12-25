@@ -101,12 +101,12 @@ const handleLogout = async () => {
             } else {
                 console.error('Invalid refresh token response:', refreshResponse.data);
                 setAuthenticated(false);
-                // handleLogout();
+                navigate('/login');
             }
         } catch (error) {
             console.error('Error refreshing token:', error);
             setAuthenticated(false);
-            // handleLogout();
+            navigate('/login');
         }
     };
     
@@ -133,6 +133,7 @@ const handleLogout = async () => {
             } else {
                 console.error('Error during authentication status check:', error);
                 navigate('/login');
+                console.log("no token")
                 setAuthenticated(false);
             }
         }
