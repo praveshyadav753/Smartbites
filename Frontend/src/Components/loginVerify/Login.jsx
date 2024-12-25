@@ -40,7 +40,7 @@ const Login = () => {
           email_or_phone: phoneOrEmail,
           is_resend: false,
         }, {
-          withCredentials: true, // Ensure cookies are included in the request
+          // withCredentials: true, // Ensure cookies are included in the request
         });
 
         console.log(response.data.message);
