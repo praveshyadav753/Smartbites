@@ -101,12 +101,12 @@ const handleLogout = async () => {
             } else {
                 console.error('Invalid refresh token response:', refreshResponse.data);
                 setAuthenticated(false);
-                handleLogout();
+                // handleLogout();
             }
         } catch (error) {
             console.error('Error refreshing token:', error);
             setAuthenticated(false);
-            handleLogout();
+            // handleLogout();
         }
     };
     
