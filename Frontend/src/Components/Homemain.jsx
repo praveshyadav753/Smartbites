@@ -10,14 +10,14 @@ import  { Recommendation,RecentlyViewed, CategoryList} from './Recommendationcom
 import axios from 'axios';
 import './css/global.css';
 import { useNavigate } from 'react-router-dom';
-import { useUser,loading } from './Usercontext';
+import { useUser } from './Usercontext';
 // import context from 'react-bootstrap/esm/AccordionContext';
 
 
 
 const HomeView = () => {
 
-	const { user, updateBasicDetails,updateAuthenticationStatus,authenticated } = useUser();
+	const { user, updateBasicDetails,updateAuthenticationStatus,authenticated,loading } = useUser();
 
 	const [first_name, setfName] = useState(user?.name || '');
 	const navigate= useNavigate();
