@@ -10,7 +10,7 @@ import  { Recommendation,RecentlyViewed, CategoryList} from './Recommendationcom
 import axios from 'axios';
 import './css/global.css';
 import { useNavigate } from 'react-router-dom';
-import { useUser } from './Usercontext';
+import { useUser,loading } from './Usercontext';
 // import context from 'react-bootstrap/esm/AccordionContext';
 
 
@@ -85,6 +85,7 @@ const HomeView = () => {
   	
       
   	return (
+		 !loading?(
     		<div className="home-view-1">
       			{/* <div className="hero-section">
         				<img className="hero-background-icon" alt="" src="hero-background.svg" />
@@ -176,7 +177,9 @@ const HomeView = () => {
         				
       			</div>
       			
-    		</div>);
+    		</div>)
+			:(<h1>loading</h1>)
+			);
 };
 
 
