@@ -2,6 +2,7 @@
 
 import { useCallback, useContext, useEffect, useState } from 'react';
 // import './css/Homemain.css';
+import "./loader"
 import './css/Homemain.css'
 import  './scanner/scanner';
 import  './homeSearch/searchpage';
